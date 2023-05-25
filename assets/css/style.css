@@ -4,26 +4,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+}
+
+html {
+    width: 100%;
 }
 
 
 
 body {
+    font-family: 'Chivo Mono', monospace !important;
     margin: 0;
     display: block;
     overflow-x: hidden;
     transition: color 0.15s, background-color 0.15s;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-        "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 1rem;
     line-height: 1.625;
     color: #373a3c;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+<<<<<<< HEAD
     background-attachment:fixed ;
     background-image: linear-gradient(to right top,#d16ba5,#c777b9,#ba83ca,#aa8fd8,#9a9ae1,#8aa7ec,#79b3f4,#69bff8,#52cffe,#41dfff,#46eefa,#5ffbf1);
+=======
+    width: 100% !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.title h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large !important;
+>>>>>>> 58c1c23e7141e403f205315830b6cb2c53eaf9cb
 }
 
 dl,
@@ -53,10 +69,56 @@ img {
     overflow: clip;
 }
 
+.hide {
+
+    display: none;
+}
+
+/* PAGINA DE CARGA */
+.loader-container {
+    background: url("ruta/a/la/imagen.gif") center no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    animation: loader 2s ease-out forwards;
+    -webkit-animation: loader 2s ease-out forwards;
+}
+
+@keyframes loader {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
 /* Main Styles*/
 
-.layout {
+.main-content {
     display: flex;
+    animation: loader 2s alternate-reverse;
+    -webkit-animation: loader 2s alternate-reverse;
+}
+
+@keyframes mainContent{
+    from {opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.layout {
+
     flex-direction: column;
     min-height: 100%;
     min-height: 100vh;
@@ -68,8 +130,8 @@ img {
 
 .header {
     padding: 0.5rem !important;
-    background-color: #f6f6f644;
-    height: 11vh;
+
+    height: 10vh;
 }
 
 @media (min-width: 670px) {
@@ -86,10 +148,20 @@ img {
     margin-right: 0 !important;
 }
 
+.hero-pretitle {
+    font-size: xx-large !important;
+    font-weight: bold;
+}
+
+.hero-pretitle a {
+    color: darkviolet;
+}
+
 .header__nav {
     display: flex;
     align-items: baseline;
-    margin-right: 5px;
+    margin-left: 100px px !important;
+    margin-right: 25px;
 }
 
 .nav__menu {
@@ -116,7 +188,6 @@ nav__item::after {
     content: "";
     display: block;
     height: 5px;
-    background-color: re;
     position: absolute;
     left: 1.25rem;
     right: 1.25rem;
@@ -128,6 +199,10 @@ nav__item::after {
 
 .nav-link {
     font-size: 1.8rem !important;
+}
+
+.js-nav-menu {
+    margin: 0;
 }
 
 .bx.bxs-brush.bx-border-circle {
@@ -147,6 +222,9 @@ nav__item::after {
     border: 0;
 }
 
+.main.container{
+    height: 100vh !important;
+}
 /* CERTIFICATES */
 
 .certificates {
@@ -185,6 +263,14 @@ nav__item::after {
     background-image: var(--gradient-full);
 }
 
+<<<<<<< HEAD
+=======
+.certificate-inner::-webkit-scrollbar {
+    display: none;
+
+}
+
+>>>>>>> 58c1c23e7141e403f205315830b6cb2c53eaf9cb
 @media (pointer: fine) {
     .certificate-inner {
         background-image: var(--gradient-bottom)
